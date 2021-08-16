@@ -7,6 +7,9 @@ document.getElementById('login-btn').addEventListener('click',function(){
    if(email=='shadhupola@gmail.com' && password==12345 ){
        console.log('valid user');
    }
+   else{
+       console.log('not valid');
+   }
    window.location.href='banking.html';
 
 })
