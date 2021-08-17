@@ -4,7 +4,7 @@ document.getElementById('login-btn').addEventListener('click',function(){
    //get password
    const passwordField=document.getElementById('login-password');
    const password=passwordField.value;
-   if(email=='shadhupola@gmail.com' && password==12345 ){
+   if(email=='abcdef@bank.com' && password==12345 ){
        console.log('valid user');
    }
    else{
