@@ -1,8 +1,21 @@
-document.getElementById('deposit-btn').addEventListener('click',function(){
+function getInputValue(){
     const deposit=document.getElementById('deposit-amount');
     const inputDepositText=deposit.value;
     const inputDeposit=parseFloat(inputDepositText);
-    console.log(inputDeposit);
+    deposit.value='';
+    return inputDeposit;
+}
+
+
+
+
+
+document.getElementById('deposit-btn').addEventListener('click',function(){
+    // const deposit=document.getElementById('deposit-amount');
+    // const inputDepositText=deposit.value;
+    // const inputDeposit=parseFloat(inputDepositText);
+    // console.log(inputDeposit);
+    const inputDeposit=getInputValue();
     // update deposit total
     const depositTotal=document.getElementById('deposit-update');
     const previousAmountText=depositTotal.innerText;
@@ -15,7 +28,7 @@ document.getElementById('deposit-btn').addEventListener('click',function(){
   const previousBalance=parseFloat(balanceTotal);
   const updatedBalance=previousBalance+newAmountTotal;
    balance.innerText=updatedBalance;
- deposit.value='';
+ 
 
 
 })
